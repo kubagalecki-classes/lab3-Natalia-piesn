@@ -10,8 +10,8 @@ unsigned int transportujFlota(unsigned int towar)
     {
       Stocznia stocznia{};
       Statek* s1 = stocznia();
-      przetransportowany += s1->transportuj();
-      if (s1 == dynamic_cast< Zaglowiec* >( s1 ))
+      przetransportowany = przetransportowany + s1->transportuj();
+      if (s1 == dynamic_cast<Zaglowiec*>(s1))
       {
         zlicz_zaglowce++;
       }
